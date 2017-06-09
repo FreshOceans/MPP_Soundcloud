@@ -3,8 +3,8 @@ $(document).ready(function() {
 
     var soundBox = {
         clientId: 'fd4e76fc67798bfa742089ed619084a6',
-        musicLibrary: [
-        ],
+        musicLibrary: [],
+        player: null,
         // ====== Initialize App ======
         initialize: function() {
           var self = this;
@@ -38,23 +38,39 @@ $(document).ready(function() {
                   self.activateListItems();           //callback that activates title onlist
                 });
         },
+        // ======= DISPLAY SEARCH RESULTS ======
         displayTrackList: function(songs) {
             console.log("== displayTrackList ==");
             var songTitle;
             for (var i = 0; i < songs.length; i++) {
                 songTitle = songs[i].title;
-                $('#search_results').append("<li>" + songTitle + "</li");
+                songId = songs[i].id;
+                $('#search_results').append("<li id='" + songId + "'>" + songTitle + "</li>");
             };
         },
+        // ======= ACTIVATE SEARCH RESULTS =======
         activateListItems: function() {
             console.log("== activateListItems ==");
             var self = this;
-            $('#search_results').on('click', '.item', function () {
-                var id = $(this).data('id');
-                console.log('id:', id)
+            $('#search_results').children("li").each(function(nextItem){
+                $(this).on('click', function(e) {
+                    console.log('-- click --');
+                    console.log(this.id);
+                    console.log("this:", this);
+                    self.playSelectedSong(this.id);
+                });
             });
-
+        },
+        // ======= STREAM TRACK =======
+        playSelectedSong: function(trackId) {
+            console.log("== playSelectedSong ==");
+            SC.stream("/tracks/" + trackId).then(function(player) {
+                self.player = player;
+                player.play();
+            });
         }
+
+
 
 
 
