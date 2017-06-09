@@ -1,15 +1,14 @@
-body {
-	font-family: 'Patrick Hand SC', cursive;
-}
+/*body {
+}*/
 
 /*====== Header ======*/
-h1 {
+/*h1 {
 	text-align: center;
 	color: LawnGreen;
-}
+}*/
 
 /*====== Jukebox ======*/
-#jukebox {
+/*#jukebox {
 	height: auto;
 	width: auto;
 	border: dotted;
@@ -28,10 +27,10 @@ h1 {
 #audio_player_img {
 	height: 150px;
 	width: auto;
-}
+}*/
 
 /*======= Image ======*/
-#songImage {
+/*#songImage {
 	border: solid;
 	border-color: yellow;
 	border-radius: 5px;
@@ -43,11 +42,11 @@ h1 {
 	background-position: center;
 	background-size: contain;
 	margin-bottom: 10px;
-	margin-top: 10px;
+	margin-top: 10px;*/
 }
 
 /*====== Audio_Player_Buttons =====*/
-.audio_player_buttons {
+/*.audio_player_buttons {
 	text-align: center;
 	margin-bottom: 10px;
 }
@@ -98,10 +97,10 @@ h1 {
 	font-size: 16px;
 	border-radius: 10px;
 	cursor: pointer;
-}
+}*/
 
 /*====== Form ======*/
-#formContainer {
+/*#formContainer {
 	display: block;
 	text-align: center;
 }
@@ -125,10 +124,10 @@ form {
 	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
-}
+}*/
 
 /*====== Library ===== */
-#library {
+/*#library {
 	display: block;
 	text-align: center;
 	height: auto;
@@ -151,5 +150,5 @@ form {
 	cursor: pointer;
 }
 #selectedSong {
-
+*/
 }

@@ -4,21 +4,20 @@
 	<head>
 	    <meta charset="utf-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>MPP_Jukebox</title>
+	    <title>MPP_Soundcloud</title>
 
         <!-- === styles === -->
-				<link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
 	    <link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 
     <!-- ======= ======= ======= body ======= ======= ======= -->
 	<body>
 		<header>
-			<h1>Play dat F**KN track!</h1>
+			<h1>PoweR of Music</h1>
 		</header>
 
-		<div id="jukebox">
-			<div id="jukebox_controls">
+		<!-- <div id="jukebox"> -->
+			<!-- <div id="jukebox_controls">
 				<div id="songImage">
 					<div id="songInfo"></div>
 				</div>
@@ -26,7 +25,7 @@
 				<div id="audio_player_controls">
 					<audio id="audio_player" src="">
 					</audio>
-					<!-- <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress> -->
+					<progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
 					<div class="audio_player_buttons">
 						<button id="play">Play</button>
 						<button id="pause">Pause</button>
@@ -60,7 +59,12 @@
 					</div>
 			</div>
 
-		</div>
+
+
+		</div> -->
+
+		<div id="searchText"></div>
+
 
 
 
@@ -68,6 +72,8 @@
 
 
 		<!-- == scripts == -->
+		<script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 
 	</body>
