@@ -1,0 +1,155 @@
+body {
+	font-family: 'Patrick Hand SC', cursive;
+}
+
+/*====== Header ======*/
+h1 {
+	text-align: center;
+	color: LawnGreen;
+}
+
+/*====== Jukebox ======*/
+#jukebox {
+	height: auto;
+	width: auto;
+	border: dotted;
+	border-color: black;
+	border-radius: 5px;
+}
+
+#jukebox_controls {
+	height: auto;
+	width: auto;
+	border: solid;
+	border-color: blue;
+	border-radius: 5px;
+	margin: 15px;
+}
+#audio_player_img {
+	height: 150px;
+	width: auto;
+}
+
+/*======= Image ======*/
+#songImage {
+	border: solid;
+	border-color: yellow;
+	border-radius: 5px;
+	height: 300px;
+	width: 300px;
+	margin: auto;
+	padding: 10px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+/*====== Audio_Player_Buttons =====*/
+.audio_player_buttons {
+	text-align: center;
+	margin-bottom: 10px;
+}
+#play {
+	background-color: green;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+#pause {
+	background-color: aqua;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+#rewind {
+	background-color: LightCoral;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+#skip {
+	background-color: MediumVioletRed;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/*====== Form ======*/
+#formContainer {
+	display: block;
+	text-align: center;
+}
+
+form {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 180px;
+	width: 200px;
+	text-align: center;
+	border: solid;
+	border-color: green;
+	border-radius: 10px;
+}
+.formData {
+	height: 20px;
+	width: 150px;
+	display: block;
+	text-align: left;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*====== Library ===== */
+#library {
+	display: block;
+	text-align: center;
+	height: auto;
+	width: 300px;
+	border: solid;
+	border-color: red;
+	border-radius: 10px;
+	cursor: default;
+	margin: auto;
+	margin-top: 10px;
+
+}
+#songTitles {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	list-style-type: none;
+	padding: 0;
+	cursor: pointer;
+}
+#selectedSong {
+
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+    <!-- ======= ======= ======= head ======= ======= ======= -->
+	<head>
+	    <meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>MPP_Jukebox</title>
+
+        <!-- === styles === -->
+				<link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+    <!-- ======= ======= ======= body ======= ======= ======= -->
+	<body>
+		<header>
+			<h1>Play dat F**KN track!</h1>
+		</header>
+
+		<div id="jukebox">
+			<div id="jukebox_controls">
+				<div id="songImage">
+					<div id="songInfo"></div>
+				</div>
+
+				<div id="audio_player_controls">
+					<audio id="audio_player" src="">
+					</audio>
+					<!-- <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress> -->
+					<div class="audio_player_buttons">
+						<button id="play">Play</button>
+						<button id="pause">Pause</button>
+						<button id="rewind">Rewind</button>
+						<button id="skip">Skip</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="formContainer">
+				<form id=songForm>
+					<input type="text" placeholder="Song Name" name="songName" id="songName" class="formData"/>
+					<input type="text_2" placeholder="Artist" name="Artist" id="artist" class="formData"/>
+					<input type="text_3" placeholder="URL" name="url" id="url" class="formData"/>
+					<input type="file" placeholder="image" name="Image" id="Image" class="formData"/>
+					<input type="button" id="addButton" value="Add Song"/>
+					<input type="button" id="clearButton" value="Clear Info">
+				</form>
+			</div>
+
+			<div id="library">
+				<p>Playlist</p>
+					<ul id="songTitles"></ul>
+					<p>Song Info</p>
+
+					<div id="selectedSong">
+						<p class="songInfo">&nbsp;</p>
+						<p class="songInfo">&nbsp;</p>
+						<p class="songInfo">&nbsp;</p>
+						<p class="songInfo">&nbsp;</p>
+					</div>
+			</div>
+
+		</div>
+
+
+
+
+
+
+		<!-- == scripts == -->
+		<script type="text/javascript" src="script.js"></script>
+
+	</body>
+</html>
