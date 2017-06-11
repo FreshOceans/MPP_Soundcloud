@@ -46,7 +46,7 @@
 }
 
 /*====== Audio_Player_Buttons =====*/
-/*.audio_player_buttons {
+.audioPlayerButtons {
 	text-align: center;
 	margin-bottom: 10px;
 }
@@ -74,30 +74,7 @@
 	border-radius: 10px;
 	cursor: pointer;
 }
-#rewind {
-	background-color: LightCoral;
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	border-radius: 10px;
-	cursor: pointer;
-}
-#skip {
-	background-color: MediumVioletRed;
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	border-radius: 10px;
-	cursor: pointer;
-}*/
+
 
 /*====== Form ======*/
 /*#formContainer {
