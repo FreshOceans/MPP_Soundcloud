@@ -12,7 +12,8 @@ $(document).ready(function() {
     var soundBox = {
         clientId: 'fd4e76fc67798bfa742089ed619084a6',
         musicLibrary: [],
-        player: null,
+        currentTrack: null,
+        // player: null,
         // ====== Initialize App ======
         initialize: function() {
           var self = this;
@@ -67,26 +68,21 @@ $(document).ready(function() {
                     console.log(this.id);
                     console.log("this:", this);
                     self.playSelectedSong(this.id);
+                    self.currentTrackInfo(this.id);
                 });
             });
         },
         // ======= STREAM TRACK =======
         playSelectedSong: function(trackId) {
             console.log("== playSelectedSong ==");
-            // SC.oEmbed("/tracks/" + trackId, { auto_play: true }).then(function(oEmbed) {
-            //     console.log('oEmbed response: ', oEmbed);
-            // });
             SC.stream("/tracks/" + trackId).then(function(player) {
                 self.player = player;
                 player.play();
             });
-            // $('#artwork').scPlayer({
-            //     loadArtworks: 1
-            // });
         },
-        activateAudioButtons: function(){
+        // ======= AUDIO BUTTONS ========
+        activateAudioButtons: function() {
             console.log("== activateAudioButtons ==");
-            var self = this;
             var audioPlayer = $('#audioPlayer');
             $('#playBtn').on('click', function(event){
                 console.log('-- playBtn --');
@@ -96,6 +92,26 @@ $(document).ready(function() {
                 console.log('-- pauseBtn --');
                 player.pause();
             });
+        },
+        // ======= Current Track Info =======
+        currentTrackInfo: function(trackId) {
+            console.log("trackId:", trackId);
+            console.log("== currentTrackInfo ==");
+            for (var i = 0; i < this.musicLibrary.length; i++) {
+                var nextTrackInfo = this.musicLibrary[i]
+                console.log("nextTrackInfo:", nextTrackInfo);
+                if (trackId == nextTrackInfo.id) {
+                    this.currentTrack = nextTrackInfo;
+                    break;
+                    console.log("currentTrack:", this.currentTrack);
+                }
+            }
+            var musicTags = $('#trackInfo').children();
+            console.log(musicTags);
+            musicTags[0].innerText = this.currentTrack.title;
+            musicTags[1].innerText = this.currentTrack.artwork_url;
+            musicTags[2].innerText = this.currentTrack.description;
+            musicTags[3].innerText = this.currentTrack.user;
 
         }
 
